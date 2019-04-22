@@ -14,6 +14,7 @@ namespace QuanLyThietBiMayTinh
 {
     //sua login
     // hang cho
+    //111
     public partial class LoginForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["db_QuanLyBanHangThietBiMayTinh"].ConnectionString;
