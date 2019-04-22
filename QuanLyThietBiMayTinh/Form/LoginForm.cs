@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace QuanLyThietBiMayTinh
 {
+    //sua login
     public partial class LoginForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["db_QuanLyBanHangThietBiMayTinh"].ConnectionString;
@@ -117,6 +118,11 @@ namespace QuanLyThietBiMayTinh
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
