@@ -13,6 +13,7 @@ using System.Windows.Forms;
 namespace QuanLyThietBiMayTinh
 {
     //sua login
+    // hang cho
     public partial class LoginForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["db_QuanLyBanHangThietBiMayTinh"].ConnectionString;
