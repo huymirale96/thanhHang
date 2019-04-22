@@ -17,6 +17,7 @@ namespace QuanLyThietBiMayTinh
     //111
     //121212121//123456
     //hang123
+    //hang xinh dep
     public partial class LoginForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["db_QuanLyBanHangThietBiMayTinh"].ConnectionString;
