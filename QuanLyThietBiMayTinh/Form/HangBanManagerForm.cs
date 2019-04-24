@@ -115,7 +115,7 @@ namespace QuanLyThietBiMayTinh
             string ma = row["sMaHangBan"].ToString();
 
             DialogResult dr;
-            dr = MessageBox.Show(string.Format("Bạn có muốn xóa {0} không ?", row["sTenHang"].ToString()),
+            dr = MessageBox.Show("Xác Nhận",
                 "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
@@ -285,6 +285,16 @@ namespace QuanLyThietBiMayTinh
             {
                 this.Dispose();
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = getDataHangBan();
+            HangBanReport report = new HangBanReport();
+            report.SetDataSource(dt);
+            ReportForm form = new ReportForm();
+            form.rpt.ReportSource = report;
+            form.ShowDialog();
         }
     }
 }

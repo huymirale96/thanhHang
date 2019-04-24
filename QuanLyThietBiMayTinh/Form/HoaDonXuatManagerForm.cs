@@ -260,5 +260,15 @@ namespace QuanLyThietBiMayTinh
 
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = getDataHoaDonBan();
+            HoaDonBanHangReport report = new HoaDonBanHangReport();
+            report.SetDataSource(dt);
+            ReportForm form = new ReportForm();
+            form.rpt.ReportSource = report;
+            form.ShowDialog();
+        }
     }
 }

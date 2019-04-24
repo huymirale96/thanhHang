@@ -12,12 +12,6 @@ using System.Windows.Forms;
 
 namespace QuanLyThietBiMayTinh
 {
-    //sua login
-    // hang cho
-    //111
-    //121212121//123456
-    //hang123
-    //hang xinh dep
     public partial class LoginForm : Form
     {
         string connectionString = ConfigurationManager.ConnectionStrings["db_QuanLyBanHangThietBiMayTinh"].ConnectionString;
@@ -61,19 +55,6 @@ namespace QuanLyThietBiMayTinh
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            {
-                Form f = searchOpenedForm("ManagerForm2");
-                if (f == null)
-                {
-                    f = new ManagerForm2();
-
-                }
-                f.Show();
-                f.Activate();
-                this.Hide();
-
-            }
-            /*
             string txtName = txtUsername.Text;
             string txtPw = txtPassword.Text;
             string username;
@@ -84,13 +65,12 @@ namespace QuanLyThietBiMayTinh
             {
                 username = dr["sUserName"].ToString();
                 password = dr["sPassword"].ToString();
-               // if (username.Equals(txtName) && password.Equals(txtPw))
-                if(true)
+                if (username.Equals(txtName) && password.Equals(txtPw))
                     {
-                    Form f = searchOpenedForm("ManagerForm");
+                    Form f = searchOpenedForm("ManagerForm2");
                     if (f == null)
                     {
-                        f = new ManagerForm();
+                        f = new ManagerForm2();
 
                     }
                     f.Show();
@@ -100,7 +80,7 @@ namespace QuanLyThietBiMayTinh
                 }
                 else MessageBox.Show("Kiểm tra lại thông tin đăng nhập");
                 
-            }*/
+            }
         }
 
         
@@ -123,11 +103,6 @@ namespace QuanLyThietBiMayTinh
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

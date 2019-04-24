@@ -49,6 +49,7 @@
             this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSearchNV = new System.Windows.Forms.Button();
             this.btnDeleteNV = new System.Windows.Forms.Button();
@@ -244,6 +245,7 @@
             // panel
             // 
             this.panel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel.Controls.Add(this.btnPrint);
             this.panel.Controls.Add(this.btnBack);
             this.panel.Controls.Add(this.btnSearchNV);
             this.panel.Controls.Add(this.btnDeleteNV);
@@ -253,6 +255,24 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(180, 577);
             this.panel.TabIndex = 6;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.Image = global::QuanLyThietBiMayTinh.Properties.Resources.Printer_New;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(0, 477);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnPrint.Size = new System.Drawing.Size(180, 100);
+            this.btnPrint.TabIndex = 10;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnBack
             // 
@@ -398,5 +418,6 @@
         private System.Windows.Forms.Button btnDeleteNV;
         private System.Windows.Forms.Button btnEditNV;
         private System.Windows.Forms.Button btnAddNV;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

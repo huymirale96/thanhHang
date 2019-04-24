@@ -189,6 +189,7 @@
             this.btnHoaDonNhap.Size = new System.Drawing.Size(150, 150);
             this.btnHoaDonNhap.TabIndex = 6;
             this.btnHoaDonNhap.UseVisualStyleBackColor = true;
+            this.btnHoaDonNhap.Click += new System.EventHandler(this.btnHoaDonNhap_Click);
             // 
             // btnHangHoa
             // 
@@ -210,6 +211,7 @@
             this.btnHangXuat.Size = new System.Drawing.Size(150, 150);
             this.btnHangXuat.TabIndex = 4;
             this.btnHangXuat.UseVisualStyleBackColor = true;
+            this.btnHangXuat.Click += new System.EventHandler(this.btnHangXuat_Click);
             // 
             // btnDangXuat
             // 

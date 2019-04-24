@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnSearchNV = new System.Windows.Forms.Button();
-            this.btnDeleteNV = new System.Windows.Forms.Button();
-            this.btnEditNV = new System.Windows.Forms.Button();
-            this.btnAddNV = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.grQuanLyNhanVien = new System.Windows.Forms.DataGridView();
@@ -62,6 +57,12 @@
             this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnSearchNV = new System.Windows.Forms.Button();
+            this.btnDeleteNV = new System.Windows.Forms.Button();
+            this.btnEditNV = new System.Windows.Forms.Button();
+            this.btnAddNV = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grQuanLyNhanVien)).BeginInit();
@@ -73,6 +74,7 @@
             // panel
             // 
             this.panel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel.Controls.Add(this.btnPrint);
             this.panel.Controls.Add(this.btnBack);
             this.panel.Controls.Add(this.btnSearchNV);
             this.panel.Controls.Add(this.btnDeleteNV);
@@ -82,96 +84,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(180, 577);
             this.panel.TabIndex = 1;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
-            this.btnBack.Image = global::QuanLyThietBiMayTinh.Properties.Resources.action_export;
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(0, 392);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnBack.Size = new System.Drawing.Size(180, 100);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnSearchNV
-            // 
-            this.btnSearchNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSearchNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearchNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.search;
-            this.btnSearchNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchNV.Location = new System.Drawing.Point(0, 298);
-            this.btnSearchNV.Name = "btnSearchNV";
-            this.btnSearchNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnSearchNV.Size = new System.Drawing.Size(180, 100);
-            this.btnSearchNV.TabIndex = 3;
-            this.btnSearchNV.Text = "Search";
-            this.btnSearchNV.UseVisualStyleBackColor = false;
-            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
-            // 
-            // btnDeleteNV
-            // 
-            this.btnDeleteNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnDeleteNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDeleteNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.delete2;
-            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteNV.Location = new System.Drawing.Point(0, 197);
-            this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnDeleteNV.Size = new System.Drawing.Size(180, 100);
-            this.btnDeleteNV.TabIndex = 2;
-            this.btnDeleteNV.Text = "Delete";
-            this.btnDeleteNV.UseVisualStyleBackColor = false;
-            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
-            // 
-            // btnEditNV
-            // 
-            this.btnEditNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEditNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.edit;
-            this.btnEditNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditNV.Location = new System.Drawing.Point(0, 97);
-            this.btnEditNV.Name = "btnEditNV";
-            this.btnEditNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnEditNV.Size = new System.Drawing.Size(180, 100);
-            this.btnEditNV.TabIndex = 1;
-            this.btnEditNV.Text = "Edit";
-            this.btnEditNV.UseVisualStyleBackColor = false;
-            this.btnEditNV.Click += new System.EventHandler(this.btnEditNV_Click);
-            // 
-            // btnAddNV
-            // 
-            this.btnAddNV.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddNV.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.add_icon;
-            this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNV.Location = new System.Drawing.Point(0, 0);
-            this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnAddNV.Size = new System.Drawing.Size(180, 100);
-            this.btnAddNV.TabIndex = 0;
-            this.btnAddNV.Text = "Add";
-            this.btnAddNV.UseVisualStyleBackColor = false;
-            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
             // 
             // panel2
             // 
@@ -428,6 +340,114 @@
             this.panel1.Size = new System.Drawing.Size(1238, 66);
             this.panel1.TabIndex = 5;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.Image = global::QuanLyThietBiMayTinh.Properties.Resources.Printer_New;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(0, 478);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnPrint.Size = new System.Drawing.Size(180, 100);
+            this.btnPrint.TabIndex = 9;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnBack.Image = global::QuanLyThietBiMayTinh.Properties.Resources.action_export;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(0, 384);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnBack.Size = new System.Drawing.Size(180, 100);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnSearchNV
+            // 
+            this.btnSearchNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSearchNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearchNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.search;
+            this.btnSearchNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearchNV.Location = new System.Drawing.Point(0, 293);
+            this.btnSearchNV.Name = "btnSearchNV";
+            this.btnSearchNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnSearchNV.Size = new System.Drawing.Size(180, 100);
+            this.btnSearchNV.TabIndex = 3;
+            this.btnSearchNV.Text = "Search";
+            this.btnSearchNV.UseVisualStyleBackColor = false;
+            this.btnSearchNV.Click += new System.EventHandler(this.btnSearchNV_Click);
+            // 
+            // btnDeleteNV
+            // 
+            this.btnDeleteNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.delete2;
+            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteNV.Location = new System.Drawing.Point(0, 197);
+            this.btnDeleteNV.Name = "btnDeleteNV";
+            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnDeleteNV.Size = new System.Drawing.Size(180, 100);
+            this.btnDeleteNV.TabIndex = 2;
+            this.btnDeleteNV.Text = "Delete";
+            this.btnDeleteNV.UseVisualStyleBackColor = false;
+            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
+            // 
+            // btnEditNV
+            // 
+            this.btnEditNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEditNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.edit;
+            this.btnEditNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditNV.Location = new System.Drawing.Point(0, 97);
+            this.btnEditNV.Name = "btnEditNV";
+            this.btnEditNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnEditNV.Size = new System.Drawing.Size(180, 100);
+            this.btnEditNV.TabIndex = 1;
+            this.btnEditNV.Text = "Edit";
+            this.btnEditNV.UseVisualStyleBackColor = false;
+            this.btnEditNV.Click += new System.EventHandler(this.btnEditNV_Click);
+            // 
+            // btnAddNV
+            // 
+            this.btnAddNV.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddNV.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAddNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.add_icon;
+            this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNV.Location = new System.Drawing.Point(0, 0);
+            this.btnAddNV.Name = "btnAddNV";
+            this.btnAddNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnAddNV.Size = new System.Drawing.Size(180, 100);
+            this.btnAddNV.TabIndex = 0;
+            this.btnAddNV.Text = "Add";
+            this.btnAddNV.UseVisualStyleBackColor = false;
+            this.btnAddNV.Click += new System.EventHandler(this.btnAddNV_Click);
+            // 
             // NhanVienManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -491,5 +511,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

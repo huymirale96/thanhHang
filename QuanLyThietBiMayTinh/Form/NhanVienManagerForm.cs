@@ -287,5 +287,15 @@ namespace QuanLyThietBiMayTinh
                 this.Dispose();
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = getAllNV();
+            NhanVienReport report = new NhanVienReport();
+            report.SetDataSource(dt);
+            ReportForm reportForm = new ReportForm();
+            reportForm.rpt.ReportSource = report;
+            reportForm.ShowDialog();
+        }
     }
 }

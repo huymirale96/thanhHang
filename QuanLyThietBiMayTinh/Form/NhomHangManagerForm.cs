@@ -223,5 +223,16 @@ namespace QuanLyThietBiMayTinh
                 this.Dispose();
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = getDataNhomHang();
+
+            NhomHangReport report = new NhomHangReport();
+            report.SetDataSource(dt);
+            ReportForm form = new ReportForm();
+            form.rpt.ReportSource = report;
+            form.ShowDialog(); 
+        }
     }
 }

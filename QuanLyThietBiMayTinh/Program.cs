@@ -20,6 +20,3 @@ namespace QuanLyThietBiMayTinh
         }
     }
 }
-
-
-//connectionString="Data Source=SONVX\SQLEXPRESS;Initial Catalog=db_QuanLyBanHangThietBiMayTinh;Integrated Security=True">

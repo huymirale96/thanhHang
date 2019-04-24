@@ -102,6 +102,28 @@ namespace QuanLyThietBiMayTinh
 
         private void btnHoaDonXuat_Click(object sender, EventArgs e)
         {
+            Form form = searchOpenedForm("HoaDonXuatManagerForm");
+            if (form == null)
+            {
+                form = new HoaDonXuatManagerForm();
+            }
+            form.Show();
+            form.Activate();
+        }
+
+        private void btnHoaDonNhap_Click(object sender, EventArgs e)
+        {
+            Form form = searchOpenedForm("HoaDonNhapManagerForm");
+            if (form == null)
+            {
+                form = new HoaDonNhapHangManagerForm();
+            }
+            form.Show();
+            form.Activate();
+        }
+
+        private void btnHangXuat_Click(object sender, EventArgs e)
+        {
             Form form = searchOpenedForm("HangBanManagerForm");
             if (form == null)
             {

@@ -283,9 +283,14 @@ namespace QuanLyThietBiMayTinh
             }
         }
 
-        private void grHoaDonNhap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            DataTable dt = getDataHoaDonNhap();
+            HoaDonNhapReport report = new HoaDonNhapReport();
+            report.SetDataSource(dt);
+            ReportForm form = new ReportForm();
+            form.rpt.ReportSource = report;
+            form.ShowDialog();
         }
     }
 }

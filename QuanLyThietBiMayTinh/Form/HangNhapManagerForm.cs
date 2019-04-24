@@ -290,5 +290,15 @@ namespace QuanLyThietBiMayTinh
 
             }
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataTable dt = getDataHangNhap();
+            HangNhapReport report = new HangNhapReport();
+            report.SetDataSource(dt);
+            ReportForm form = new ReportForm();
+            form.rpt.ReportSource = report;
+            form.ShowDialog();
+        }
     }
 }

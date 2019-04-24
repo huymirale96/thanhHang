@@ -29,7 +29,14 @@
         private void InitializeComponent()
         {
             this.gridview = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnFunction = new System.Windows.Forms.Panel();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnOK = new System.Windows.Forms.Button();
             this.cboMaHoaDonBan = new System.Windows.Forms.ComboBox();
             this.txtTHoiGianBaoHanh = new System.Windows.Forms.TextBox();
@@ -42,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -49,13 +57,6 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridview)).BeginInit();
             this.pnFunction.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +79,36 @@
             this.gridview.Size = new System.Drawing.Size(1053, 288);
             this.gridview.TabIndex = 8;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "sMaHangBan";
+            this.Column1.HeaderText = "Mã Hàng";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "sMaHoaDonBan";
+            this.Column2.HeaderText = "Mã Hóa Đơn Bán";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "iSoLuong";
+            this.Column3.HeaderText = "Số Lượng";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "fGiaBan";
+            this.Column4.HeaderText = "Giá Bán";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "iThoiGianBaoHanh";
+            this.Column5.HeaderText = "Thời Gian Bảo Hành";
+            this.Column5.Name = "Column5";
+            // 
             // pnFunction
             // 
             this.pnFunction.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -98,6 +129,22 @@
             this.pnFunction.Name = "pnFunction";
             this.pnFunction.Size = new System.Drawing.Size(1053, 273);
             this.pnFunction.TabIndex = 7;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.Location = new System.Drawing.Point(431, 121);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(223, 22);
+            this.txtSoLuong.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(327, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Số Lượng";
             // 
             // btnOK
             // 
@@ -195,6 +242,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.Controls.Add(this.btnPrint);
             this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnSearch);
@@ -204,6 +252,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(178, 577);
             this.panel2.TabIndex = 6;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.Image = global::QuanLyThietBiMayTinh.Properties.Resources.Printer_New;
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(0, 477);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnPrint.Size = new System.Drawing.Size(180, 100);
+            this.btnPrint.TabIndex = 10;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnBack
             // 
@@ -334,52 +400,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ HÀNG BÁN";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "sMaHangBan";
-            this.Column1.HeaderText = "Mã Hàng";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "sMaHoaDonBan";
-            this.Column2.HeaderText = "Mã Hóa Đơn Bán";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "iSoLuong";
-            this.Column3.HeaderText = "Số Lượng";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "fGiaBan";
-            this.Column4.HeaderText = "Giá Bán";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "iThoiGianBaoHanh";
-            this.Column5.HeaderText = "Thời Gian Bảo Hành";
-            this.Column5.Name = "Column5";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Số Lượng";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(431, 121);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(223, 22);
-            this.txtSoLuong.TabIndex = 13;
-            // 
             // HangBanManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,5 +455,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
