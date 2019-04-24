@@ -66,18 +66,21 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(9, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1238, 66);
+            this.panel1.Size = new System.Drawing.Size(928, 54);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(395, 11);
+            this.label1.Location = new System.Drawing.Point(296, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(534, 46);
+            this.label1.Size = new System.Drawing.Size(437, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "QUẢN LÝ NHÀ CUNG CẤP";
             // 
@@ -94,17 +97,19 @@
             this.pnFunction.Controls.Add(this.label4);
             this.pnFunction.Controls.Add(this.lbMaNhanVien);
             this.pnFunction.Controls.Add(this.lbTitle);
-            this.pnFunction.Location = new System.Drawing.Point(198, 382);
+            this.pnFunction.Location = new System.Drawing.Point(148, 310);
+            this.pnFunction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnFunction.Name = "pnFunction";
-            this.pnFunction.Size = new System.Drawing.Size(1052, 279);
+            this.pnFunction.Size = new System.Drawing.Size(789, 227);
             this.pnFunction.TabIndex = 8;
             // 
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.SystemColors.Info;
-            this.btnOK.Location = new System.Drawing.Point(467, 208);
+            this.btnOK.Location = new System.Drawing.Point(350, 169);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(183, 42);
+            this.btnOK.Size = new System.Drawing.Size(137, 34);
             this.btnOK.TabIndex = 15;
             this.btnOK.Text = "Chức năng";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -112,65 +117,73 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(405, 156);
+            this.txtSDT.Location = new System.Drawing.Point(304, 127);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(245, 22);
+            this.txtSDT.Size = new System.Drawing.Size(185, 20);
             this.txtSDT.TabIndex = 8;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(405, 119);
+            this.txtDiaChi.Location = new System.Drawing.Point(304, 97);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(245, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(185, 20);
             this.txtDiaChi.TabIndex = 7;
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(405, 77);
+            this.txtTen.Location = new System.Drawing.Point(304, 63);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(245, 22);
+            this.txtTen.Size = new System.Drawing.Size(185, 20);
             this.txtTen.TabIndex = 6;
             // 
             // txtMa
             // 
-            this.txtMa.Location = new System.Drawing.Point(405, 41);
+            this.txtMa.Location = new System.Drawing.Point(304, 33);
+            this.txtMa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(245, 22);
+            this.txtMa.Size = new System.Drawing.Size(185, 20);
             this.txtMa.TabIndex = 5;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(305, 162);
+            this.label6.Location = new System.Drawing.Point(229, 132);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Số điện thoại";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(305, 124);
+            this.label5.Location = new System.Drawing.Point(229, 101);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Địa chỉ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(305, 83);
+            this.label4.Location = new System.Drawing.Point(229, 67);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 17);
+            this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tên NCC";
             // 
             // lbMaNhanVien
             // 
             this.lbMaNhanVien.AutoSize = true;
-            this.lbMaNhanVien.Location = new System.Drawing.Point(305, 46);
+            this.lbMaNhanVien.Location = new System.Drawing.Point(229, 37);
+            this.lbMaNhanVien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMaNhanVien.Name = "lbMaNhanVien";
-            this.lbMaNhanVien.Size = new System.Drawing.Size(59, 17);
+            this.lbMaNhanVien.Size = new System.Drawing.Size(47, 13);
             this.lbMaNhanVien.TabIndex = 1;
             this.lbMaNhanVien.Text = "Mã NCC";
             // 
@@ -178,9 +191,10 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(19, 0);
+            this.lbTitle.Location = new System.Drawing.Point(14, 0);
+            this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(152, 32);
+            this.lbTitle.Size = new System.Drawing.Size(117, 26);
             this.lbTitle.TabIndex = 0;
             this.lbTitle.Text = "Chức năng";
             // 
@@ -188,16 +202,18 @@
             // 
             this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.gridview);
-            this.panel2.Location = new System.Drawing.Point(198, 84);
+            this.panel2.Location = new System.Drawing.Point(148, 68);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1052, 297);
+            this.panel2.Size = new System.Drawing.Size(789, 241);
             this.panel2.TabIndex = 7;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(921, 506);
+            this.btnRefresh.Location = new System.Drawing.Point(691, 411);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(56, 19);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Tải lại";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -212,11 +228,13 @@
             this.sDiaChi,
             this.sSoDienThoai});
             this.gridview.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gridview.Location = new System.Drawing.Point(3, 3);
+            this.gridview.Location = new System.Drawing.Point(2, 2);
+            this.gridview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridview.Name = "gridview";
             this.gridview.RowTemplate.Height = 24;
-            this.gridview.Size = new System.Drawing.Size(1046, 291);
+            this.gridview.Size = new System.Drawing.Size(784, 236);
             this.gridview.TabIndex = 0;
+            this.gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridview_CellContentClick);
             // 
             // sMaNhanVien
             // 
@@ -251,9 +269,10 @@
             this.panel.Controls.Add(this.btnDeleteNV);
             this.panel.Controls.Add(this.btnEditNV);
             this.panel.Controls.Add(this.btnAddNV);
-            this.panel.Location = new System.Drawing.Point(12, 84);
+            this.panel.Location = new System.Drawing.Point(9, 68);
+            this.panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(180, 577);
+            this.panel.Size = new System.Drawing.Size(135, 469);
             this.panel.TabIndex = 6;
             // 
             // btnPrint
@@ -265,10 +284,11 @@
             this.btnPrint.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
             this.btnPrint.Image = global::QuanLyThietBiMayTinh.Properties.Resources.Printer_New;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(0, 477);
+            this.btnPrint.Location = new System.Drawing.Point(0, 388);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnPrint.Size = new System.Drawing.Size(180, 100);
+            this.btnPrint.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnPrint.Size = new System.Drawing.Size(135, 81);
             this.btnPrint.TabIndex = 10;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -283,10 +303,11 @@
             this.btnBack.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
             this.btnBack.Image = global::QuanLyThietBiMayTinh.Properties.Resources.action_export;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(0, 392);
+            this.btnBack.Location = new System.Drawing.Point(0, 318);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnBack.Size = new System.Drawing.Size(180, 100);
+            this.btnBack.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnBack.Size = new System.Drawing.Size(135, 81);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -301,10 +322,11 @@
             this.btnSearchNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
             this.btnSearchNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.search;
             this.btnSearchNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchNV.Location = new System.Drawing.Point(0, 298);
+            this.btnSearchNV.Location = new System.Drawing.Point(0, 242);
+            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearchNV.Name = "btnSearchNV";
-            this.btnSearchNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnSearchNV.Size = new System.Drawing.Size(180, 100);
+            this.btnSearchNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnSearchNV.Size = new System.Drawing.Size(135, 81);
             this.btnSearchNV.TabIndex = 3;
             this.btnSearchNV.Text = "Search";
             this.btnSearchNV.UseVisualStyleBackColor = false;
@@ -319,10 +341,11 @@
             this.btnDeleteNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
             this.btnDeleteNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.delete2;
             this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteNV.Location = new System.Drawing.Point(0, 197);
+            this.btnDeleteNV.Location = new System.Drawing.Point(0, 160);
+            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnDeleteNV.Size = new System.Drawing.Size(180, 100);
+            this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnDeleteNV.Size = new System.Drawing.Size(135, 81);
             this.btnDeleteNV.TabIndex = 2;
             this.btnDeleteNV.Text = "Delete";
             this.btnDeleteNV.UseVisualStyleBackColor = false;
@@ -337,10 +360,11 @@
             this.btnEditNV.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.edit;
             this.btnEditNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditNV.Location = new System.Drawing.Point(0, 97);
+            this.btnEditNV.Location = new System.Drawing.Point(0, 79);
+            this.btnEditNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditNV.Name = "btnEditNV";
-            this.btnEditNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnEditNV.Size = new System.Drawing.Size(180, 100);
+            this.btnEditNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnEditNV.Size = new System.Drawing.Size(135, 81);
             this.btnEditNV.TabIndex = 1;
             this.btnEditNV.Text = "Edit";
             this.btnEditNV.UseVisualStyleBackColor = false;
@@ -356,9 +380,10 @@
             this.btnAddNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.add_icon;
             this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddNV.Location = new System.Drawing.Point(0, 0);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnAddNV.Size = new System.Drawing.Size(180, 100);
+            this.btnAddNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnAddNV.Size = new System.Drawing.Size(135, 81);
             this.btnAddNV.TabIndex = 0;
             this.btnAddNV.Text = "Add";
             this.btnAddNV.UseVisualStyleBackColor = false;
@@ -366,16 +391,17 @@
             // 
             // NhaCungCapManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnFunction);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MaximumSize = new System.Drawing.Size(1280, 720);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(964, 592);
             this.Name = "NhaCungCapManagerForm";
             this.Text = "NhaCungCapManagerForm";
             this.Load += new System.EventHandler(this.NhaCungCapManagerForm_Load);

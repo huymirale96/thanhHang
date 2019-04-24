@@ -265,5 +265,15 @@ namespace QuanLyThietBiMayTinh
             reportForm.rpt.ReportSource = report;
             reportForm.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

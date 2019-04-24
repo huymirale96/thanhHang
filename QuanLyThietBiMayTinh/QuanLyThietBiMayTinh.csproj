@@ -146,6 +146,12 @@
     <Compile Include="Form\NhaCungCapManagerForm.Designer.cs">
       <DependentUpon>NhaCungCapManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm2.Designer.cs">
+      <DependentUpon>ManagerForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="NCCreport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -221,6 +227,9 @@
     <EmbeddedResource Include="HoaDonNhapReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HoaDonNhapReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm2.resx">
+      <DependentUpon>ManagerForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NCCreport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
