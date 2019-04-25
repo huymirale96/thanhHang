@@ -201,6 +201,7 @@ namespace QuanLyThietBiMayTinh
         private void HangNhapManagerForm_Load(object sender, EventArgs e)
         {
             showHangNhap();
+            btnPrint.Visible = false;
             showNhomHangCBO();
         }
 

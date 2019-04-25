@@ -215,6 +215,7 @@ namespace QuanLyThietBiMayTinh
         {
             showHangNhap();
             showNhomHangCBO();
+            btnPrint.Visible = false;
             pnFunction.Visible = false;
         }
 

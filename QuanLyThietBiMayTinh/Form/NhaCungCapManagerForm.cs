@@ -154,6 +154,7 @@ namespace QuanLyThietBiMayTinh
         private void NhaCungCapManagerForm_Load(object sender, EventArgs e)
         {
             showNCC();
+            btnPrint.Visible = false;
             pnFunction.Visible = false;
         }
 

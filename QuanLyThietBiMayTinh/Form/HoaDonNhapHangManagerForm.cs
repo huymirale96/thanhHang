@@ -35,6 +35,7 @@ namespace QuanLyThietBiMayTinh
         private void HoaDonNhapHangManagerForm_Load(object sender, EventArgs e)
         {
             pnFunction.Visible = false;
+            btnPrint.Visible = false;
             showHoaDonNhap();
             showNhanVienCBO();
             showNhaCungCapCBO();

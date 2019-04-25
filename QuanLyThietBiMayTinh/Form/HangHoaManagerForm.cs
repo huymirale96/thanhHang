@@ -31,6 +31,7 @@ namespace QuanLyThietBiMayTinh
         
         private void HangHoaManagerForm_Load(object sender, EventArgs e)
         {
+            btnPrint.Visible = false;
             showHangHoa();
             showNhomHangCBO();
             pnFunction.Visible = false;

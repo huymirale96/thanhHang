@@ -185,6 +185,7 @@ namespace QuanLyThietBiMayTinh
         private void HoaDonXuatManagerForm_Load(object sender, EventArgs e)
         {
             pnFunction.Visible = false;
+            btnPrint.Visible = false;
             showHoaDonBan();
             showNhanVienCBO();
         }
