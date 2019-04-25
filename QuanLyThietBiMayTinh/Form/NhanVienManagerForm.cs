@@ -82,6 +82,21 @@ namespace QuanLyThietBiMayTinh
         public void showAllNhanVien ()
         {
             DataTable dt = getAllNV();
+            dt.Columns.Add("GT", typeof(String));
+            foreach (DataRow row in dt.Rows)
+            {
+                //MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?",""+ row["bGioiTinh"].ToString(),MessageBoxButtons.OK);
+                if (row["bGioiTinh"].ToString() == "True")
+
+                {
+                    row["GT"] = "Nam";
+                }
+                else
+                {
+                    row["GT"] = "Nu";
+                }
+            }
+            dataGridView1.DataSource = dt;
             grQuanLyNhanVien.AutoGenerateColumns = false;
             grQuanLyNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grQuanLyNhanVien.DataSource = dt;
@@ -304,6 +319,11 @@ namespace QuanLyThietBiMayTinh
             ReportForm reportForm = new ReportForm();
             reportForm.rpt.ReportSource = report;
             reportForm.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
