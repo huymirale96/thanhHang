@@ -291,7 +291,7 @@ namespace QuanLyThietBiMayTinh
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DataTable dt = getDataHangBan();
-            HangBanReport report = new HangBanReport();
+            cau3 report = new cau3();
             report.SetDataSource(dt);
             ReportForm form = new ReportForm();
             form.rpt.ReportSource = report;

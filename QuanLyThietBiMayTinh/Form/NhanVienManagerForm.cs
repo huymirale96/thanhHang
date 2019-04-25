@@ -314,7 +314,7 @@ namespace QuanLyThietBiMayTinh
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DataTable dt = getAllNV();
-            NhanVienReport report = new NhanVienReport();
+            cau3_1 report = new cau3_1();
             report.SetDataSource(dt);
             ReportForm reportForm = new ReportForm();
             reportForm.rpt.ReportSource = report;
