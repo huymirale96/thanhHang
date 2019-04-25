@@ -91,6 +91,7 @@ namespace QuanLyThietBiMayTinh
         {
             showAllNhanVien();
             pnChucNang.Visible = false;
+            rbNam.Checked = true;
         }
 
     
@@ -235,31 +236,38 @@ namespace QuanLyThietBiMayTinh
                     showAllNhanVien();
                     break;
 
-                case "Thêm":       
-                    if (rbNam.Checked == true)
+                case "Thêm": //cau1
+                    if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
                     {
-                        gt = 1;
-                    }
-                    else gt = 0;
-
-                    ngaySinh = dateNgaySinh.Value.Date;
-
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
+                        if (rbNam.Checked == true)
                         {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
-                            cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
-                            cmd.Parameters.AddWithValue("@bGioiTinh", gt);
-                            cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
-                            cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
-                            cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
-                            conn.Open();
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
-
+                            gt = 1;
                         }
+                        else gt = 0;
+
+                        ngaySinh = dateNgaySinh.Value.Date;
+
+                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
+                            {
+                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                                cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
+                                cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
+                                cmd.Parameters.AddWithValue("@bGioiTinh", gt);
+                                cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
+                                cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
+                                cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
+                                conn.Open();
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
                     }
                     showAllNhanVien();
                     break;
