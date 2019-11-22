@@ -252,8 +252,8 @@ namespace QuanLyThietBiMayTinh//
                     break;
 
                 case "Thêm": //cau1
-                    if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
-                    {
+                    //if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
+                    //{
                         if (rbNam.Checked == true)
                         {
                             gt = 1;
@@ -278,12 +278,12 @@ namespace QuanLyThietBiMayTinh//
                                 conn.Close();
 
                             }
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
-                    }
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
+                    //}
                     showAllNhanVien();
                     break;
             }
