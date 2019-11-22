@@ -55,6 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cau3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cau3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cau3_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cau3_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form\HangHoaManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,14 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="cau3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cau3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cau3_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cau3_1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\HangBanManagerForm.resx">
       <DependentUpon>HangBanManagerForm.cs</DependentUpon>
     </EmbeddedResource>

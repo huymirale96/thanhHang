@@ -1,6 +1,15 @@
 ﻿Create database db_QuanLyBanHangThietBiMayTinh
 use db_QuanLyBanHangThietBiMayTinh
 Go
+//cau3
+create proc sp_cau3
+as
+begin
+	select tblNhanVien.sMaNhanVien, tblNhanVien.sTenNhanVien,tblNhanVien.bGioiTinh,tblNhanVien.sDiaChi,(year(getdate())- year(tblNhanVien.dNgaySinh)) as 'Tuoi'
+	 from tblNhanVien
+end
+
+select * from tblnhanvien
 
 create table tblNhomHang(
 	sMaNhomHang nvarchar(10) primary key not null,

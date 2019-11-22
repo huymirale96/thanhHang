@@ -82,6 +82,21 @@ namespace QuanLyThietBiMayTinh
         public void showAllNhanVien ()
         {
             DataTable dt = getAllNV();
+            dt.Columns.Add("GT", typeof(String));
+            foreach (DataRow row in dt.Rows)
+            {
+                //MessageBox.Show("Bạn có muốn thoát khỏi chương trình không ?",""+ row["bGioiTinh"].ToString(),MessageBoxButtons.OK);
+                if (row["bGioiTinh"].ToString() == "True")
+
+                {
+                    row["GT"] = "Nam";
+                }
+                else
+                {
+                    row["GT"] = "Nu";
+                }
+            }
+            dataGridView1.DataSource = dt;
             grQuanLyNhanVien.AutoGenerateColumns = false;
             grQuanLyNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             grQuanLyNhanVien.DataSource = dt;
@@ -91,6 +106,7 @@ namespace QuanLyThietBiMayTinh
         {
             showAllNhanVien();
             pnChucNang.Visible = false;
+            rbNam.Checked = true;
         }
 
     
@@ -235,31 +251,38 @@ namespace QuanLyThietBiMayTinh
                     showAllNhanVien();
                     break;
 
-                case "Thêm":       
-                    if (rbNam.Checked == true)
+                case "Thêm": //cau1
+                    if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
                     {
-                        gt = 1;
-                    }
-                    else gt = 0;
-
-                    ngaySinh = dateNgaySinh.Value.Date;
-
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
+                        if (rbNam.Checked == true)
                         {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
-                            cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
-                            cmd.Parameters.AddWithValue("@bGioiTinh", gt);
-                            cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
-                            cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
-                            cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
-                            conn.Open();
-                            cmd.ExecuteNonQuery();
-                            conn.Close();
-
+                            gt = 1;
                         }
+                        else gt = 0;
+
+                        ngaySinh = dateNgaySinh.Value.Date;
+
+                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
+                            {
+                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                                cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
+                                cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
+                                cmd.Parameters.AddWithValue("@bGioiTinh", gt);
+                                cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
+                                cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
+                                cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
+                                conn.Open();
+                                cmd.ExecuteNonQuery();
+                                conn.Close();
+
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
                     }
                     showAllNhanVien();
                     break;
@@ -291,11 +314,16 @@ namespace QuanLyThietBiMayTinh
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DataTable dt = getAllNV();
-            NhanVienReport report = new NhanVienReport();
+            cau3_1 report = new cau3_1();
             report.SetDataSource(dt);
             ReportForm reportForm = new ReportForm();
             reportForm.rpt.ReportSource = report;
             reportForm.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
