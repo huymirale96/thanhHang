@@ -245,7 +245,7 @@ namespace QuanLyThietBiMayTinh//
                             cmd.ExecuteNonQuery();
                             conn.Close();
 
-                        }////sdasđ
+                        }////sdasđđay rồi
                     }
 
                     showAllNhanVien();
