@@ -96,6 +96,7 @@ namespace QuanLyThietBiMayTinh//
                     row["GT"] = "Nu";
                 }
             }
+            dt.Columns.Remove("bGioiTinh");
             dataGridView1.DataSource = dt;
             grQuanLyNhanVien.AutoGenerateColumns = false;
             grQuanLyNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -107,6 +108,7 @@ namespace QuanLyThietBiMayTinh//
             showAllNhanVien();
             pnChucNang.Visible = false;
             rbNam.Checked = true;
+            grQuanLyNhanVien.Visible = false;
         }
 
     
@@ -188,7 +190,7 @@ namespace QuanLyThietBiMayTinh//
             txtSDT.Text = string.Empty;
 
         }
-        
+
         private void btnOK_Click(object sender, EventArgs e)
         {
             int gt = 0;
@@ -221,14 +223,14 @@ namespace QuanLyThietBiMayTinh//
                     DataTable dtNhanVien = (DataTable)grQuanLyNhanVien.DataSource;
                     DataRow row = dtNhanVien.Rows[grQuanLyNhanVien.CurrentRow.Index];
                     string manv = row["sMaNhanVien"].ToString();
-       
+
                     if (rbNam.Checked == true)
                     {
                         gt = 1;
                     }
                     else gt = 0;
 
-                     ngaySinh = dateNgaySinh.Value.Date;
+                    ngaySinh = dateNgaySinh.Value.Date;
                     NhanVienManagerForm f = new NhanVienManagerForm();
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     {
@@ -252,40 +254,41 @@ namespace QuanLyThietBiMayTinh//
                     break;
 
                 case "Thêm": //cau1
-                    //if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
-                    //{
-                        if (rbNam.Checked == true)
+                             //if (txtMaNV.Text != "" && txtDiaChi.Text != "" && txtHoTenNV.Text != "" && txtSDT.Text != "") 
+                             //{
+                    if (rbNam.Checked == true)
+                    {
+                        gt = 1;
+                    }
+                    else gt = 0;
+
+                    ngaySinh = dateNgaySinh.Value.Date;
+
+                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
                         {
-                            gt = 1;
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
+                            cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
+                            cmd.Parameters.AddWithValue("@bGioiTinh", gt);
+                            cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
+                            cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
+                            cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
                         }
-                        else gt = 0;
-
-                        ngaySinh = dateNgaySinh.Value.Date;
-
-                        using (SqlConnection conn = new SqlConnection(connectionString))
-                        {
-                            using (SqlCommand cmd = new SqlCommand(sqlAddNhanVien, conn))
-                            {
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                                cmd.Parameters.AddWithValue("@sMaNV", txtMaNV.Text);
-                                cmd.Parameters.AddWithValue("@sTenNV", txtHoTenNV.Text);
-                                cmd.Parameters.AddWithValue("@bGioiTinh", gt);
-                                cmd.Parameters.AddWithValue("@dNgaySinh", ngaySinh);
-                                cmd.Parameters.AddWithValue("@sDiaChi", txtDiaChi.Text);
-                                cmd.Parameters.AddWithValue("@sSoDienThoai", txtSDT.Text);
-                                conn.Open();
-                                cmd.ExecuteNonQuery();
-                                conn.Close();
-
-                            }
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
-                    //}
-                    showAllNhanVien();
-                    break;
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Thông Báo ?","Phải nhập đủ", MessageBoxButtons.OK);
+                        //}
+                        showAllNhanVien();
+                        break;
+                    }
             }
         }
         private void hienNV(string filter)
@@ -324,6 +327,15 @@ namespace QuanLyThietBiMayTinh//
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        void grQuanLyNhanVien_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            var grid = (DataGridView)sender;
+            if (grid.Columns[e.ColumnIndex].Name == "Giới Tính")
+            {
+                e.Value = (bool)e.Value ? "MY_TEXT_FOR_TRUE" : "MY_TEXT_FOR_FALSE";
+                e.FormattingApplied = true;
+            }
         }
     }
 }

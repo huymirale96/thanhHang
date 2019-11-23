@@ -36,14 +36,9 @@
             this.btnEditNV = new System.Windows.Forms.Button();
             this.btnAddNV = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.grQuanLyNhanVien = new System.Windows.Forms.DataGridView();
-            this.sMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pnChucNang = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
@@ -63,15 +58,20 @@
             this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grQuanLyNhanVien)).BeginInit();
             this.pnChucNang.SuspendLayout();
             this.pnGT.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -84,7 +84,7 @@
             this.panel.Controls.Add(this.btnEditNV);
             this.panel.Controls.Add(this.btnAddNV);
             this.panel.Location = new System.Drawing.Point(9, 68);
-            this.panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel.Margin = new System.Windows.Forms.Padding(2);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(135, 469);
             this.panel.TabIndex = 1;
@@ -99,7 +99,7 @@
             this.btnPrint.Image = global::QuanLyThietBiMayTinh.Properties.Resources.Printer_New;
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.Location = new System.Drawing.Point(0, 388);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnPrint.Size = new System.Drawing.Size(135, 81);
@@ -118,7 +118,7 @@
             this.btnBack.Image = global::QuanLyThietBiMayTinh.Properties.Resources.action_export;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBack.Location = new System.Drawing.Point(0, 312);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnBack.Size = new System.Drawing.Size(135, 81);
@@ -137,7 +137,7 @@
             this.btnSearchNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.search;
             this.btnSearchNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSearchNV.Location = new System.Drawing.Point(0, 238);
-            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchNV.Name = "btnSearchNV";
             this.btnSearchNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnSearchNV.Size = new System.Drawing.Size(135, 81);
@@ -156,7 +156,7 @@
             this.btnDeleteNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.delete2;
             this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteNV.Location = new System.Drawing.Point(0, 160);
-            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteNV.Name = "btnDeleteNV";
             this.btnDeleteNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnDeleteNV.Size = new System.Drawing.Size(135, 81);
@@ -175,7 +175,7 @@
             this.btnEditNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.edit;
             this.btnEditNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditNV.Location = new System.Drawing.Point(0, 79);
-            this.btnEditNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditNV.Name = "btnEditNV";
             this.btnEditNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnEditNV.Size = new System.Drawing.Size(135, 81);
@@ -194,7 +194,7 @@
             this.btnAddNV.Image = global::QuanLyThietBiMayTinh.Properties.Resources.add_icon;
             this.btnAddNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddNV.Location = new System.Drawing.Point(0, 0);
-            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddNV.Name = "btnAddNV";
             this.btnAddNV.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnAddNV.Size = new System.Drawing.Size(135, 81);
@@ -209,15 +209,26 @@
             this.panel2.Controls.Add(this.btnRefresh);
             this.panel2.Controls.Add(this.grQuanLyNhanVien);
             this.panel2.Location = new System.Drawing.Point(148, 68);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(789, 281);
             this.panel2.TabIndex = 2;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 49);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(783, 234);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(691, 411);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(56, 19);
             this.btnRefresh.TabIndex = 1;
@@ -238,47 +249,12 @@
             this.GT});
             this.grQuanLyNhanVien.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.grQuanLyNhanVien.Location = new System.Drawing.Point(2, 2);
-            this.grQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grQuanLyNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.grQuanLyNhanVien.Name = "grQuanLyNhanVien";
             this.grQuanLyNhanVien.RowTemplate.Height = 24;
-            this.grQuanLyNhanVien.Size = new System.Drawing.Size(784, 119);
+            this.grQuanLyNhanVien.Size = new System.Drawing.Size(784, 42);
             this.grQuanLyNhanVien.TabIndex = 0;
-            // 
-            // sMaNhanVien
-            // 
-            this.sMaNhanVien.DataPropertyName = "sMaNhanVien";
-            this.sMaNhanVien.HeaderText = "Mã nhân viên";
-            this.sMaNhanVien.Name = "sMaNhanVien";
-            // 
-            // sTenNhanVien
-            // 
-            this.sTenNhanVien.DataPropertyName = "sTenNhanVien";
-            this.sTenNhanVien.HeaderText = "Họ tên";
-            this.sTenNhanVien.Name = "sTenNhanVien";
-            // 
-            // bGioiTinh
-            // 
-            this.bGioiTinh.DataPropertyName = "bGioiTinh";
-            this.bGioiTinh.HeaderText = "Giới tính (nam)";
-            this.bGioiTinh.Name = "bGioiTinh";
-            // 
-            // dNgaySinh
-            // 
-            this.dNgaySinh.DataPropertyName = "dNgaySinh";
-            this.dNgaySinh.HeaderText = "Ngày sinh";
-            this.dNgaySinh.Name = "dNgaySinh";
-            // 
-            // sDiaChi
-            // 
-            this.sDiaChi.DataPropertyName = "sDiaChi";
-            this.sDiaChi.HeaderText = "Địa chỉ";
-            this.sDiaChi.Name = "sDiaChi";
-            // 
-            // sSoDienThoai
-            // 
-            this.sSoDienThoai.DataPropertyName = "sSoDienThoai";
-            this.sSoDienThoai.HeaderText = "Số điện thoại";
-            this.sSoDienThoai.Name = "sSoDienThoai";
+            this.grQuanLyNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -309,7 +285,7 @@
             this.pnChucNang.Controls.Add(this.lbMaNhanVien);
             this.pnChucNang.Controls.Add(this.lbTitle);
             this.pnChucNang.Location = new System.Drawing.Point(148, 354);
-            this.pnChucNang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnChucNang.Margin = new System.Windows.Forms.Padding(2);
             this.pnChucNang.Name = "pnChucNang";
             this.pnChucNang.Size = new System.Drawing.Size(789, 183);
             this.pnChucNang.TabIndex = 4;
@@ -318,7 +294,7 @@
             // 
             this.btnOK.BackColor = System.Drawing.SystemColors.Info;
             this.btnOK.Location = new System.Drawing.Point(382, 117);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(214, 34);
             this.btnOK.TabIndex = 15;
@@ -331,7 +307,7 @@
             this.pnGT.Controls.Add(this.rbNu);
             this.pnGT.Controls.Add(this.rbNam);
             this.pnGT.Location = new System.Drawing.Point(453, 39);
-            this.pnGT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnGT.Margin = new System.Windows.Forms.Padding(2);
             this.pnGT.Name = "pnGT";
             this.pnGT.Size = new System.Drawing.Size(143, 24);
             this.pnGT.TabIndex = 14;
@@ -340,7 +316,7 @@
             // 
             this.rbNu.AutoSize = true;
             this.rbNu.Location = new System.Drawing.Point(92, 6);
-            this.rbNu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbNu.Margin = new System.Windows.Forms.Padding(2);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(39, 17);
             this.rbNu.TabIndex = 12;
@@ -352,7 +328,7 @@
             // 
             this.rbNam.AutoSize = true;
             this.rbNam.Location = new System.Drawing.Point(4, 6);
-            this.rbNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbNam.Margin = new System.Windows.Forms.Padding(2);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(47, 17);
             this.rbNam.TabIndex = 11;
@@ -364,7 +340,7 @@
             // 
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgaySinh.Location = new System.Drawing.Point(453, 79);
-            this.dateNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.dateNgaySinh.Name = "dateNgaySinh";
             this.dateNgaySinh.Size = new System.Drawing.Size(144, 20);
             this.dateNgaySinh.TabIndex = 13;
@@ -392,7 +368,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(163, 132);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(185, 20);
             this.txtSDT.TabIndex = 8;
@@ -400,7 +376,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(163, 102);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(185, 20);
             this.txtDiaChi.TabIndex = 7;
@@ -408,7 +384,7 @@
             // txtHoTenNV
             // 
             this.txtHoTenNV.Location = new System.Drawing.Point(163, 68);
-            this.txtHoTenNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoTenNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTenNV.Name = "txtHoTenNV";
             this.txtHoTenNV.Size = new System.Drawing.Size(185, 20);
             this.txtHoTenNV.TabIndex = 6;
@@ -416,7 +392,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Location = new System.Drawing.Point(163, 39);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(185, 20);
             this.txtMaNV.TabIndex = 5;
@@ -477,24 +453,51 @@
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(928, 54);
             this.panel1.TabIndex = 5;
             // 
+            // sMaNhanVien
+            // 
+            this.sMaNhanVien.DataPropertyName = "sMaNhanVien";
+            this.sMaNhanVien.HeaderText = "Mã nhân viên";
+            this.sMaNhanVien.Name = "sMaNhanVien";
+            // 
+            // sTenNhanVien
+            // 
+            this.sTenNhanVien.DataPropertyName = "sTenNhanVien";
+            this.sTenNhanVien.HeaderText = "Họ tên";
+            this.sTenNhanVien.Name = "sTenNhanVien";
+            // 
+            // bGioiTinh
+            // 
+            this.bGioiTinh.DataPropertyName = "bGioiTinh";
+            this.bGioiTinh.HeaderText = "Giới Tính";
+            this.bGioiTinh.Name = "bGioiTinh";
+            // 
+            // dNgaySinh
+            // 
+            this.dNgaySinh.DataPropertyName = "dNgaySinh";
+            this.dNgaySinh.HeaderText = "Ngày sinh";
+            this.dNgaySinh.Name = "dNgaySinh";
+            // 
+            // sDiaChi
+            // 
+            this.sDiaChi.DataPropertyName = "sDiaChi";
+            this.sDiaChi.HeaderText = "Địa chỉ";
+            this.sDiaChi.Name = "sDiaChi";
+            // 
+            // sSoDienThoai
+            // 
+            this.sSoDienThoai.DataPropertyName = "sSoDienThoai";
+            this.sSoDienThoai.HeaderText = "Số điện thoại";
+            this.sSoDienThoai.Name = "sSoDienThoai";
+            // 
             // GT
             // 
-            this.GT.HeaderText = "Column1";
+            this.GT.HeaderText = "Gioi Tinh";
             this.GT.Name = "GT";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 126);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(783, 157);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // NhanVienManagerForm
             // 
@@ -507,13 +510,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(964, 592);
             this.Name = "NhanVienManagerForm";
             this.Text = "Quản Lý Nhân Viên";
             this.Load += new System.EventHandler(this.NhanVienManagerForm_Load);
             this.panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grQuanLyNhanVien)).EndInit();
             this.pnChucNang.ResumeLayout(false);
             this.pnChucNang.PerformLayout();
@@ -521,7 +525,6 @@
             this.pnGT.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -534,12 +537,6 @@
         private System.Windows.Forms.Button btnAddNV;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sMaNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sTenNhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bGioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sSoDienThoai;
         private System.Windows.Forms.Button btnRefresh;
         public System.Windows.Forms.DataGridView grQuanLyNhanVien;
         private System.Windows.Forms.Panel pnChucNang;
@@ -562,7 +559,13 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GT;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sMaNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTenNhanVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sSoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GT;
     }
 }
