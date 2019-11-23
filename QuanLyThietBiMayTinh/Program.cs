@@ -11,6 +11,8 @@ namespace QuanLyThietBiMayTinh
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        // nhau di em oi
         [STAThread]
         static void Main()
         {
