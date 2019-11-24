@@ -67,6 +67,12 @@
       <DependentUpon>cau3_1.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ctrForTestForm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ctrForTestForm.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form\HangHoaManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm1.Designer.cs">
+      <DependentUpon>TestForm1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="cau3.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cau3.cs</LastGenOutput>
@@ -197,6 +209,10 @@
     <EmbeddedResource Include="cau3_1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cau3_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrForTestForm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ctrForTestForm.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\HangBanManagerForm.resx">
       <DependentUpon>HangBanManagerForm.cs</DependentUpon>
@@ -270,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm1.resx">
+      <DependentUpon>TestForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

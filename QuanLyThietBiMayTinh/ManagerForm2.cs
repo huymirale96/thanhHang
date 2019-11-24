@@ -134,5 +134,10 @@ namespace QuanLyThietBiMayTinh
             form.Show();
             form.Activate();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

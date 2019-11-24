@@ -16,5 +16,10 @@ namespace QuanLyThietBiMayTinh
         {
             InitializeComponent();
         }
+
+        private void rpt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

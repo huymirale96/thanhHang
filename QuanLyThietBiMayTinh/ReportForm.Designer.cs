@@ -38,16 +38,20 @@
             this.rpt.Cursor = System.Windows.Forms.Cursors.Default;
             this.rpt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpt.Location = new System.Drawing.Point(0, 0);
+            this.rpt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rpt.Name = "rpt";
-            this.rpt.Size = new System.Drawing.Size(800, 450);
+            this.rpt.Size = new System.Drawing.Size(600, 366);
             this.rpt.TabIndex = 0;
+            this.rpt.ToolPanelWidth = 150;
+            this.rpt.Load += new System.EventHandler(this.rpt_Load);
             // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.rpt);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
             this.ResumeLayout(false);

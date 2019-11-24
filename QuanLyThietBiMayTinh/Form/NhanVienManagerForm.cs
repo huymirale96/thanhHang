@@ -337,5 +337,10 @@ namespace QuanLyThietBiMayTinh//
                 e.FormattingApplied = true;
             }
         }
+
+        private void pnChucNang_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

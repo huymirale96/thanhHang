@@ -39,6 +39,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.grQuanLyNhanVien = new System.Windows.Forms.DataGridView();
+            this.sMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.pnChucNang = new System.Windows.Forms.Panel();
             this.btnOK = new System.Windows.Forms.Button();
@@ -58,13 +65,6 @@
             this.lbMaNhanVien = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sSoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -256,6 +256,47 @@
             this.grQuanLyNhanVien.TabIndex = 0;
             this.grQuanLyNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // sMaNhanVien
+            // 
+            this.sMaNhanVien.DataPropertyName = "sMaNhanVien";
+            this.sMaNhanVien.HeaderText = "Mã nhân viên";
+            this.sMaNhanVien.Name = "sMaNhanVien";
+            // 
+            // sTenNhanVien
+            // 
+            this.sTenNhanVien.DataPropertyName = "sTenNhanVien";
+            this.sTenNhanVien.HeaderText = "Họ tên";
+            this.sTenNhanVien.Name = "sTenNhanVien";
+            // 
+            // bGioiTinh
+            // 
+            this.bGioiTinh.DataPropertyName = "bGioiTinh";
+            this.bGioiTinh.HeaderText = "Giới Tính";
+            this.bGioiTinh.Name = "bGioiTinh";
+            // 
+            // dNgaySinh
+            // 
+            this.dNgaySinh.DataPropertyName = "dNgaySinh";
+            this.dNgaySinh.HeaderText = "Ngày sinh";
+            this.dNgaySinh.Name = "dNgaySinh";
+            // 
+            // sDiaChi
+            // 
+            this.sDiaChi.DataPropertyName = "sDiaChi";
+            this.sDiaChi.HeaderText = "Địa chỉ";
+            this.sDiaChi.Name = "sDiaChi";
+            // 
+            // sSoDienThoai
+            // 
+            this.sSoDienThoai.DataPropertyName = "sSoDienThoai";
+            this.sSoDienThoai.HeaderText = "Số điện thoại";
+            this.sSoDienThoai.Name = "sSoDienThoai";
+            // 
+            // GT
+            // 
+            this.GT.HeaderText = "Gioi Tinh";
+            this.GT.Name = "GT";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -289,6 +330,7 @@
             this.pnChucNang.Name = "pnChucNang";
             this.pnChucNang.Size = new System.Drawing.Size(789, 183);
             this.pnChucNang.TabIndex = 4;
+            this.pnChucNang.Paint += new System.Windows.Forms.PaintEventHandler(this.pnChucNang_Paint);
             // 
             // btnOK
             // 
@@ -457,47 +499,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(928, 54);
             this.panel1.TabIndex = 5;
-            // 
-            // sMaNhanVien
-            // 
-            this.sMaNhanVien.DataPropertyName = "sMaNhanVien";
-            this.sMaNhanVien.HeaderText = "Mã nhân viên";
-            this.sMaNhanVien.Name = "sMaNhanVien";
-            // 
-            // sTenNhanVien
-            // 
-            this.sTenNhanVien.DataPropertyName = "sTenNhanVien";
-            this.sTenNhanVien.HeaderText = "Họ tên";
-            this.sTenNhanVien.Name = "sTenNhanVien";
-            // 
-            // bGioiTinh
-            // 
-            this.bGioiTinh.DataPropertyName = "bGioiTinh";
-            this.bGioiTinh.HeaderText = "Giới Tính";
-            this.bGioiTinh.Name = "bGioiTinh";
-            // 
-            // dNgaySinh
-            // 
-            this.dNgaySinh.DataPropertyName = "dNgaySinh";
-            this.dNgaySinh.HeaderText = "Ngày sinh";
-            this.dNgaySinh.Name = "dNgaySinh";
-            // 
-            // sDiaChi
-            // 
-            this.sDiaChi.DataPropertyName = "sDiaChi";
-            this.sDiaChi.HeaderText = "Địa chỉ";
-            this.sDiaChi.Name = "sDiaChi";
-            // 
-            // sSoDienThoai
-            // 
-            this.sSoDienThoai.DataPropertyName = "sSoDienThoai";
-            this.sSoDienThoai.HeaderText = "Số điện thoại";
-            this.sSoDienThoai.Name = "sSoDienThoai";
-            // 
-            // GT
-            // 
-            this.GT.HeaderText = "Gioi Tinh";
-            this.GT.Name = "GT";
             // 
             // NhanVienManagerForm
             // 
