@@ -13,6 +13,7 @@ namespace QuanLyThietBiMayTinh
         /// </summary>
         /// 
         //  huy dz
+        //Data Source=DESKTOP-LT0DBKK\MSSQLSERVER03;Initial Catalog=db_QuanLyBanHangThietBiMayTinh;Integrated Security=True
         [STAThread]
         static void Main()
         {
