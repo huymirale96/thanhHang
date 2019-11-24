@@ -12,7 +12,7 @@ namespace QuanLyThietBiMayTinh
         /// The main entry point for the application.
         /// </summary>
         /// 
-        //  lalal la l a huhehueeu
+        //  huy dz
         [STAThread]
         static void Main()
         {
