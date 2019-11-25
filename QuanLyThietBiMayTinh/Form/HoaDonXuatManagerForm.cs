@@ -115,29 +115,62 @@ namespace QuanLyThietBiMayTinh
             }
             showHoaDonBan();
         }
-
-        public void delete()
+        bool kiemTra1()
         {
             DataTable dt = (DataTable)grHoaDonNhap.DataSource;
             DataRow row = dt.Rows[grHoaDonNhap.CurrentRow.Index];
             string ma = row["sMaHoaDonBan"].ToString();
-
-            DialogResult dr;
-            dr = MessageBox.Show("Xóa ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.Yes)
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (SqlConnection cnn = new SqlConnection(connectionString))
+
+                using (SqlCommand cmd = new SqlCommand("check1", conn))
                 {
-                    using (SqlCommand cmd = new SqlCommand(sql_Delete, cnn))
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", ma);
+                    SqlDataAdapter dap = new SqlDataAdapter(cmd);
+                    DataTable ta = new DataTable();
+                    dap.Fill(ta);
+                    if (ta.Rows.Count > 0)
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@mahoadon", ma);
-                        cnn.Open();
-                        cmd.ExecuteNonQuery();
-                        cnn.Close();
+                        return false;
                     }
+                    else
+                    { return true; }
+
+
                 }
-                showHoaDonBan();
+            }
+        }
+
+        public void delete()
+        {
+            if (kiemTra1())
+            {
+                DataTable dt = (DataTable)grHoaDonNhap.DataSource;
+                DataRow row = dt.Rows[grHoaDonNhap.CurrentRow.Index];
+                string ma = row["sMaHoaDonBan"].ToString();
+
+                DialogResult dr;
+                dr = MessageBox.Show("Xóa ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    using (SqlConnection cnn = new SqlConnection(connectionString))
+                    {
+                        using (SqlCommand cmd = new SqlCommand(sql_Delete, cnn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@mahoadon", ma);
+                            cnn.Open();
+                            cmd.ExecuteNonQuery();
+                            cnn.Close();
+                        }
+                    }
+                    showHoaDonBan();
+                }
+            }
+            else
+            {
+                MessageBox.Show("k dc xoa");
             }
         }
 
