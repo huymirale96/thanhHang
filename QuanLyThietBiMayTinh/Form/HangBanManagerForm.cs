@@ -147,7 +147,11 @@ namespace QuanLyThietBiMayTinh
 
         public void edit()
         {
-            string maHD = cboMaHoaDonBan.SelectedValue.ToString();
+            int soLuong = Int32.Parse(txtSoLuong.Text);
+            int gia = Int32.Parse(txtGiaBan.Text);
+            if (soLuong > 0 && gia > 0)
+            {
+                string maHD = cboMaHoaDonBan.SelectedValue.ToString();
             DataTable dt = (DataTable)gridview.DataSource;
             DataRow row = dt.Rows[gridview.CurrentRow.Index];
             string ma = row["sMaHangBan"].ToString();
@@ -170,6 +174,11 @@ namespace QuanLyThietBiMayTinh
             }
 
             showHangNhap();
+            }
+            else
+            {
+                MessageBox.Show("So luong va gia phai lon hon 0");
+            }
         }
 
         public void search()
