@@ -87,26 +87,36 @@ namespace QuanLyThietBiMayTinh
 
         public void add()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            //cau 1
+            int soLuong = Int32.Parse(txtSoLuong.Text);
+            int gia = Int32.Parse(txtGiaBan.Text);
+            if (soLuong > 0 && gia > 0)
             {
-                string mahd = cboMaHoaDonBan.SelectedValue.ToString();
-
-                using (SqlCommand cmd = new SqlCommand(sql_Add, conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@mahb", txtMaHangBan.Text);
-                    cmd.Parameters.AddWithValue("@mahd", mahd);
-                    cmd.Parameters.AddWithValue("@soluong", txtSoLuong.Text);
-                    cmd.Parameters.AddWithValue("@giaban", txtGiaBan.Text);
-                    cmd.Parameters.AddWithValue("@thoigianbaohanh", txtTHoiGianBaoHanh.Text);
+                    string mahd = cboMaHoaDonBan.SelectedValue.ToString();
 
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
+                    using (SqlCommand cmd = new SqlCommand(sql_Add, conn))
+                    {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@mahb", txtMaHangBan.Text);
+                        cmd.Parameters.AddWithValue("@mahd", mahd);
+                        cmd.Parameters.AddWithValue("@soluong", txtSoLuong.Text);
+                        cmd.Parameters.AddWithValue("@giaban", txtGiaBan.Text);
+                        cmd.Parameters.AddWithValue("@thoigianbaohanh", txtTHoiGianBaoHanh.Text);
 
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                    }
                 }
+                showHangNhap();
             }
-            showHangNhap();
+            else
+            {
+                MessageBox.Show("So luong va gia phai lon hon 0");
+            }
         }
 
         public void delete()

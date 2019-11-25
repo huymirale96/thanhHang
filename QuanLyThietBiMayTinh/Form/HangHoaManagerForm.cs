@@ -314,5 +314,10 @@ namespace QuanLyThietBiMayTinh
             form.rpt.ReportSource = report;
             form.ShowDialog();
         }
+
+        private void pnFunction_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
