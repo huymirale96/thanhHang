@@ -78,7 +78,11 @@ namespace QuanLyThietBiMayTinh
                     this.Hide();
                     
                 }
-                else MessageBox.Show("Kiểm tra lại thông tin đăng nhập");
+                else
+                {
+
+                }    
+                //MessageBox.Show("Kiểm tra lại thông tin đăng nhập");
                 
             }
         }

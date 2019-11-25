@@ -89,11 +89,11 @@ namespace QuanLyThietBiMayTinh//
                 if (row["bGioiTinh"].ToString() == "True")
 
                 {
-                    row["GT"] = "Nam";
+                    row["GT"] = "True";
                 }
                 else
                 {
-                    row["GT"] = "Nu";
+                    row["GT"] = "False";
                 }
             }
             dt.Columns.Remove("bGioiTinh");
