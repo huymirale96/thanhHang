@@ -49,6 +49,10 @@ namespace QuanLyThietBiMayTinh
                     {
                         DataTable tbl = new DataTable("tblHangHoa");
                         da.Fill(tbl);
+                        //if(tbl.Rows.Count > 0)
+                        //{
+
+                        //}
                         return tbl;
                     }
                 }
